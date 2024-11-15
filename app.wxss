@@ -1,0 +1,5 @@
+/* app.wxss */
+page {
+  background-color: #F0F4F7;
+  font-family: Arial, sans-serif;
+}

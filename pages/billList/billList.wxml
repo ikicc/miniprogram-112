@@ -1,0 +1,27 @@
+<!-- pages/billList/billList.wxml -->
+<view class="container">
+  <view class="header">
+    <text class="title">账单列表</text>
+  </view>
+
+  <scroll-view class="bill-list" scroll-y="true">
+    <block wx:for="{{sortedMonths}}" wx:key="month">
+      <view class="month-section">
+        <view class="month-header">
+          <text class="month-title">{{item}}</text>
+        </view>
+        <block wx:for="{{billsByMonth[item]}}" wx:key="roomNumber">
+          <view class="bill-card" bindtap="viewBillDetail" data-room="{{item.roomNumber}}" data-month="{{item.month}}">
+            <view class="bill-info">
+              <text class="tenant-name">{{item.tenantName}}</text>
+              <text class="tenant-room">房间号：{{item.roomNumber}}</text>
+            </view>
+            <view class="bill-summary">
+              <text class="total-amount">总金额：¥{{item.totalAmount}} 元</text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </block>
+  </scroll-view>
+</view>

@@ -1,0 +1,84 @@
+/* pages/addBill/addBill.wxss */
+
+.container {
+  padding: 20px;
+}
+
+.header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #007AFF;
+}
+
+.form-container {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-item {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.form-label {
+  width: 120px;
+  font-size: 16px;
+  color: #333333;
+}
+
+.picker, .form-value {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  background-color: #F5F7FA;
+  color: #333333;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.section {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007AFF;
+  margin-bottom: 15px;
+}
+
+.form-value {
+  display: flex;
+  align-items: center;
+}
+
+.submit-button {
+  width: 100%;
+  background-color: #007AFF;
+  color: white;
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #005BBB;
+}

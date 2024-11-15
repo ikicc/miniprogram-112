@@ -1,0 +1,22 @@
+<!-- pages/editTenant/editTenant.wxml -->
+<view class="container">
+  <view class="header">
+    <text class="title">编辑租户</text>
+  </view>
+  <form bindsubmit="submitEditTenant" report-submit="false">
+    <view class="form-item">
+      <text class="form-label">姓名：</text>
+      <input name="name" placeholder="请输入租户姓名" bindinput="onNameInput" value="{{name}}" />
+    </view>
+    <view class="form-item">
+      <text class="form-label">房间号：</text>
+      <input name="room_number" placeholder="请输入房间号" bindinput="onRoomNumberInput" value="{{room_number}}" />
+    </view>
+    <view class="form-item">
+      <text class="form-label">租金：</text>
+      <input name="rent" type="number" placeholder="请输入租金" bindinput="onRentInput" value="{{rent}}" />
+    </view>
+    <button formType="submit" class="submit-button">更新租户</button>
+    <button bindtap="deleteTenant" class="delete-button">删除租户</button>
+  </form>
+</view>

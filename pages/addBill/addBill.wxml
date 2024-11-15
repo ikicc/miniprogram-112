@@ -1,0 +1,76 @@
+<!-- pages/addBill/addBill.wxml -->
+<view class="container">
+  <view class="header">
+    <text class="title">添加账单</text>
+  </view>
+  <view class="form-container">
+    <!-- 显示房间号 -->
+    <view class="form-item">
+      <text class="form-label">房间号：</text>
+      <text class="form-value">{{selectedRoomNumber}}</text>
+    </view>
+
+    <!-- 月份选择 -->
+    <view class="form-item">
+      <text class="form-label">月份：</text>
+      <picker mode="date" fields="month" bindchange="onMonthChange">
+        <view class="picker">
+          {{selectedMonth || '请选择月份'}}
+        </view>
+      </picker>
+    </view>
+
+    <!-- 水费部分 -->
+    <view class="section">
+      <text class="section-title">水费</text>
+      
+      <view class="form-item">
+        <text class="form-label">本月表数：</text>
+        <input type="number" placeholder="请输入本月水表数" bindinput="onWaterCurrentInput" value="{{water.current}}" />
+      </view>
+      
+      <view class="form-item">
+        <text class="form-label">上月表数：</text>
+        <text class="form-value">{{water.previous || '-'}}</text>
+      </view>
+      
+      <view class="form-item">
+        <text class="form-label">用水量：</text>
+        <text class="form-value">{{water.usage || '-'}}</text>
+      </view>
+      
+      <view class="form-item">
+        <text class="form-label">金额：</text>
+        <input type="number" placeholder="自动计算" bindinput="onWaterAmountInput" value="{{water.amount}}" />
+      </view>
+    </view>
+
+    <!-- 电费部分 -->
+    <view class="section">
+      <text class="section-title">电费</text>
+      
+      <view class="form-item">
+        <text class="form-label">本月表数：</text>
+        <input type="number" placeholder="请输入本月电表数" bindinput="onElectricityCurrentInput" value="{{electricity.current}}" />
+      </view>
+      
+      <view class="form-item">
+        <text class="form-label">上月表数：</text>
+        <text class="form-value">{{electricity.previous || '-'}}</text>
+      </view>
+      
+      <view class="form-item">
+        <text class="form-label">用电量：</text>
+        <text class="form-value">{{electricity.usage || '-'}}</text>
+      </view>
+      
+      <view class="form-item">
+        <text class="form-label">金额：</text>
+        <input type="number" placeholder="自动计算" bindinput="onElectricityAmountInput" value="{{electricity.amount}}" />
+      </view>
+    </view>
+
+    <!-- 提交按钮 -->
+    <button class="submit-button" bindtap="submitBill">保存账单</button>
+  </view>
+</view>

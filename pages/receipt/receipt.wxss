@@ -1,0 +1,99 @@
+/* pages/receipt/receipt.wxss */
+.container {
+  padding: 10px;
+  background-color: #F0F4F7;
+  min-height: 100vh;
+}
+
+.receipt-content {
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.receipt-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.receipt-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #007AFF;
+}
+
+.receipt-date {
+  font-size: 28px;
+  color: #555555;
+  margin-top: 10px;
+}
+
+.receipt-content {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+  margin-bottom: 15px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007AFF;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 4px;
+}
+
+.detail-item {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+}
+
+.detail-label {
+  width: 100px;
+  font-size: 16px;
+  color: #333333;
+}
+
+.detail-value {
+  flex: 1;
+  font-size: 16px;
+  color: #555555;
+}
+
+.detail-section {
+  margin-bottom: 10px;
+}
+
+.detail-subtitle {
+  font-size: 16px;
+  font-weight: bold;
+  color: #34C759;
+  margin-bottom: 5px;
+}
+
+.total {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 5px;
+}
+
+.export-button {
+  width: 100%;
+  background-color: #007AFF;
+  color: white;
+  padding: 12px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.export-button:hover {
+  background-color: #005BBB;
+}

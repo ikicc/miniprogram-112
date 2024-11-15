@@ -1,0 +1,87 @@
+<!-- pages/receipt/receipt.wxml -->
+<view class="container">
+  <!-- 收据内容容器，添加 id -->
+  <view id="receiptContent" class="receipt-content">
+    <view class="receipt-header">
+      <text class="receipt-title">收据</text>
+      <text class="receipt-date">{{selectedMonth}}</text>
+    </view>
+
+    <view class="section">
+      <text class="section-title">租户信息</text>
+      <view class="detail-item">
+        <text class="detail-label">姓名：</text>
+        <text class="detail-value">{{tenant.name}}</text>
+      </view>
+      <view class="detail-item">
+        <text class="detail-label">房间号：</text>
+        <text class="detail-value">{{tenant.room_number}}</text>
+      </view>
+    </view>
+
+    <view class="section">
+      <text class="section-title">金额信息</text>
+      <view class="detail-item">
+        <text class="detail-label">租金：</text>
+        <text class="detail-value">¥{{tenant.rent}} 元</text>
+      </view>
+      <view class="detail-item">
+        <text class="detail-label">水费：</text>
+        <text class="detail-value">¥{{bill.water.amount}} 元</text>
+      </view>
+      <view class="detail-item">
+        <text class="detail-label">电费：</text>
+        <text class="detail-value">¥{{bill.electricity.amount}} 元</text>
+      </view>
+      <view class="detail-item total-amount">
+        <text class="detail-label">总金额：</text>
+        <text class="detail-value">¥{{totalAmount}} 元</text>
+      </view>
+    </view>
+
+    <view class="section">
+      <text class="section-title">水电费详情</text>
+
+      <view class="subsection">
+        <text class="subsection-title">水费</text>
+        <view class="detail-item">
+          <text class="detail-label">本月表数：</text>
+          <text class="detail-value">{{bill.water.current}}</text>
+        </view>
+        <view class="detail-item">
+          <text class="detail-label">上月表数：</text>
+          <text class="detail-value">{{bill.water.previous}}</text>
+        </view>
+        <view class="detail-item">
+          <text class="detail-label">用量：</text>
+          <text class="detail-value">{{bill.water.usage}} 方</text>
+        </view>
+      </view>
+
+      <view class="subsection">
+        <text class="subsection-title">电费</text>
+        <view class="detail-item">
+          <text class="detail-label">本月表数：</text>
+          <text class="detail-value">{{bill.electricity.current}}</text>
+        </view>
+        <view class="detail-item">
+          <text class="detail-label">上月表数：</text>
+          <text class="detail-value">{{bill.electricity.previous}}</text>
+        </view>
+        <view class="detail-item">
+          <text class="detail-label">用量：</text>
+          <text class="detail-value">{{bill.electricity.usage}} 度</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 导出收据按钮 -->
+  <button class="export-button" bindtap="exportReceipt">导出收据</button>
+
+  <!-- 引入 wxml2canvas 组件 -->
+  <wxml2canvas 
+    id="wxml2canvas"
+    style="position: fixed; top: -9999rpx; left: -9999rpx;"
+  ></wxml2canvas>
+</view>

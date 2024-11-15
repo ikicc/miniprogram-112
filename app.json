@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/addTenant/addTenant",
+    "pages/editTenant/editTenant",
+    "pages/addBill/addBill",
+    "pages/billList/billList",
+    "pages/receipt/receipt",
+    "pages/billDetail/billDetail"
+  ],
+  "window": {
+    "navigationBarTitleText": "房东管理系统",
+    "navigationBarBackgroundColor": "#007AFF",
+    "navigationBarTextStyle": "white",
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#F0F4F7"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

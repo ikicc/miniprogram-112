@@ -1,0 +1,33 @@
+<!-- pages/index/index.wxml -->
+<view class="container">
+  <view class="header">
+    <text class="title">房东管理系统</text>
+  </view>
+  
+  <!-- 垂直排列的按钮组 -->
+  <view class="button-group">
+    <button class="header-button" bindtap="navigateToAddTenant">添加租户</button>
+    <button class="header-button" bindtap="navigateToBillList">账单列表</button>
+  </view>
+  
+  <!-- 租户列表 -->
+  <scroll-view class="tenant-list" scroll-y="true">
+    <block wx:for="{{tenants}}" wx:key="room_number">
+      <view class="tenant-card">
+        <view class="tenant-info">
+          <text class="tenant-name">{{item.name}}</text>
+          <text class="tenant-detail">房间号：{{item.room_number}}</text>
+          <text class="tenant-detail">租金：¥{{item.rentFormatted}} 元</text>
+        </view>
+        <view class="tenant-actions">
+          <button class="action-button edit-button" bindtap="editTenant" data-room="{{item.room_number}}">编辑租户</button>
+          <button class="action-button bill-button" bindtap="addBill" data-room="{{item.room_number}}">添加账单</button>
+          <button class="action-button receipt-button" bindtap="generateReceipt" data-room="{{item.room_number}}">生成收据</button>
+        </view>
+      </view>
+    </block>
+    <view wx:if="{{tenants.length === 0}}" class="no-tenants">
+      <text>当前没有租户信息，请添加租户。</text>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,77 @@
+/* pages/billDetail/billDetail.wxss */
+.container {
+  padding: 10px;
+  background-color: #F0F4F7;
+  height: 100vh;
+}
+
+.bill-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.bill-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007AFF;
+}
+
+.bill-month {
+  font-size: 18px;
+  color: #555555;
+  margin-top: 5px;
+}
+
+.bill-content {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+  margin-bottom: 15px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007AFF;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 4px;
+}
+
+.detail-item {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+}
+
+.detail-label {
+  width: 100px;
+  font-size: 16px;
+  color: #333333;
+}
+
+.detail-value {
+  flex: 1;
+  font-size: 16px;
+  color: #555555;
+}
+
+.detail-section {
+  margin-bottom: 10px;
+}
+
+.detail-subtitle {
+  font-size: 16px;
+  font-weight: bold;
+  color: #34C759;
+  margin-bottom: 5px;
+}
+
+.total {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 5px;
+}

@@ -1,0 +1,71 @@
+/* pages/billList/billList.wxss */
+.container {
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007AFF;
+}
+
+.bill-list {
+  max-height: 80vh;
+}
+
+.month-section {
+  margin-bottom: 20px;
+}
+
+.month-header {
+  background-color: #F0F0F0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.month-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.bill-card {
+  background-color: #FFFFFF;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bill-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.tenant-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.tenant-room {
+  font-size: 16px;
+  color: #666;
+}
+
+.bill-summary {
+  text-align: right;
+}
+
+.total-amount {
+  font-size: 16px;
+  color: #FF3B30;
+  font-weight: bold;
+}
