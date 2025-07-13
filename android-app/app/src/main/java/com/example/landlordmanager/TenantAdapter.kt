@@ -7,7 +7,11 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class TenantAdapter(private val onClick: (Tenant) -> Unit) : RecyclerView.Adapter<TenantAdapter.ViewHolder>() {
+class TenantAdapter(
+    private val onEdit: (Tenant) -> Unit,
+    private val onAddBill: (Tenant) -> Unit,
+    private val onReceipt: (Tenant) -> Unit
+) : RecyclerView.Adapter<TenantAdapter.ViewHolder>() {
     private var tenants: List<Tenant> = listOf()
 
     fun setTenants(list: List<Tenant>) {
@@ -23,7 +27,9 @@ class TenantAdapter(private val onClick: (Tenant) -> Unit) : RecyclerView.Adapte
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val tenant = tenants[position]
         holder.bind(tenant)
-        holder.itemView.findViewById<Button>(R.id.button_edit).setOnClickListener { onClick(tenant) }
+        holder.itemView.findViewById<Button>(R.id.button_edit).setOnClickListener { onEdit(tenant) }
+        holder.itemView.findViewById<Button>(R.id.button_add_bill).setOnClickListener { onAddBill(tenant) }
+        holder.itemView.findViewById<Button>(R.id.button_receipt).setOnClickListener { onReceipt(tenant) }
     }
 
     override fun getItemCount(): Int = tenants.size

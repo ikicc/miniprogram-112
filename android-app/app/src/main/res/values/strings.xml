@@ -5,4 +5,12 @@
     <string name="edit">Edit</string>
     <string name="add_bill">Add Bill</string>
     <string name="generate_receipt">Generate Receipt</string>
+    <string name="month_hint">Month (YYYY-MM)</string>
+    <string name="water_usage">Water Usage</string>
+    <string name="water_amount">Water Amount</string>
+    <string name="electricity_usage">Electricity Usage</string>
+    <string name="electricity_amount">Electricity Amount</string>
+    <string name="save_bill">Save Bill</string>
+    <string name="bill_list_title">Bills</string>
+    <string name="receipt_title">Receipt</string>
 </resources>

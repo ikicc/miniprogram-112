@@ -19,9 +19,19 @@ class MainActivity : AppCompatActivity() {
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view_tenants)
 
         recyclerView.layoutManager = LinearLayoutManager(this)
-        adapter = TenantAdapter { tenant ->
-            // TODO edit tenant or show options
-        }
+        adapter = TenantAdapter(
+            onEdit = { /* editing not implemented */ },
+            onAddBill = { tenant ->
+                val intent = Intent(this, AddBillActivity::class.java)
+                intent.putExtra("room_number", tenant.roomNumber)
+                startActivity(intent)
+            },
+            onReceipt = { tenant ->
+                val intent = Intent(this, BillListActivity::class.java)
+                intent.putExtra("room_number", tenant.roomNumber)
+                startActivity(intent)
+            }
+        )
         recyclerView.adapter = adapter
 
         buttonAdd.setOnClickListener {
