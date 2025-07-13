@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LandlordManager</string>
+    <string name="add_tenant">Add Tenant</string>
+    <string name="bill_list">Bill List</string>
+    <string name="edit">Edit</string>
+    <string name="add_bill">Add Bill</string>
+    <string name="generate_receipt">Generate Receipt</string>
+</resources>
